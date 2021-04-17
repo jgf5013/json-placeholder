@@ -1,0 +1,21 @@
+<div>
+  <div [ngSwitch]="postLoadStatus">
+    <!-- Spinner is commented out for now as page load time is quick -->
+    <!-- <div *ngSwitchCase="loadingStatuses.Loading">
+      <mat-spinner></mat-spinner>
+    </div> -->
+    <div *ngSwitchCase="loadingStatuses.Success">
+      <div *ngIf="posts.length" class="posts">
+        <post *ngFor="let post of posts" [post]="post"
+          [focused]="post.userId === focusedPost?.userId"
+          (postHoverEvent)="onPostHoverEvent($event)">
+        </post>
+      </div>      
+    </div>
+    <div *ngSwitchCase="loadingStatuses.Failure" class="error-container">
+      <mat-card>
+        There was an issue retrieving your posts. If this issue persists, please call us at +31 (800) JSON LIB
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+@import '../mixins.scss';
+
+.post {
+
+    padding: 0px;
+    aspect-ratio: 1;
+    transition: 0.25s;
+    &:hover {
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        @include sm {
+            font-size: x-small;
+        }
+        @include xs {
+            font-size: xx-small;
+        }
+    }
+
+    &.focused {
+        background-color: whitesmoke;
+    }
+}

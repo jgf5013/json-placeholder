@@ -8,9 +8,14 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', async () => {
+  it('should have a nice simple heading toolbar', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('json-placeholder-posts app is running!');
+    expect(await page.getToolbarText()).toMatch('JSON$');
+  });
+
+  it('should load posts route if invalid route is given', async () => {
+    await page.navigateTo('not-a-real-path');
+    expect(await page.getPath()).toMatch('\/posts$')
   });
 
   afterEach(async () => {

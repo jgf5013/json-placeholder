@@ -1,0 +1,11 @@
+.posts {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    column-gap: 0.25rem;
+    row-gap: 0.25rem;
+}
+
+.error-container {
+    width: 100%;
+}
