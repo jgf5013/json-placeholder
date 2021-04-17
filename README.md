@@ -49,7 +49,7 @@ Note(s):
 
 #### Responsive Design
 I pride myself on making apps that are mobile friendly and almost always develop with the responsive "Toogle device toolbar" on. If you resize your browser or view the application from your phone, you should see the squares adjust size to fit within your screen. This has been tested down to a width of 240px ([Unihertz Jelly](https://www.unihertz.com/jelly-2.html) viewport)
-![Responsive Design](https://github.com/jgf5013/json-placeholder/blob/main/responsive-design.png | width=100)
+<img src="https://github.com/jgf5013/json-placeholder/blob/main/responsive-design.png" width=300>
 
 #### Layout
 I really like [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) and prefer it for most use-cases, but [Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) makes more sense for something that is a strict 10x10 layout.
@@ -59,7 +59,7 @@ As mentioned in the [Gotchas](#Gotchas) section, this application uses Angular M
 
 #### Additional Fun
 I like the idea that there's a grid of information, some how which isn't visible until the post is "turned over" and thought it might be fun to show an association between posts from the same user. The API return elements sorted by `userId` so row 1 contains all posts from `userId=1`, row 2 contains all posts from `userId=1`, etc. but this isn't guaranteed and I thought it would be fun to highlight posts from related users. You can see the power of this but switching the `SHUFFLE` constant to `true` in [post/constants.ts](https://github.com/jgf5013/json-placeholder/blob/main/src/app/post/constants.ts). Screenshot of this functionality is provided below.
-![Responsive Design](https://github.com/jgf5013/json-placeholder/blob/main/shuffled-posts.png | width=100)
+<img src="https://github.com/jgf5013/json-placeholder/blob/main/shuffled-posts.png" width=300>
 
 
 #### To Use, or Not to Use a Spinner??
